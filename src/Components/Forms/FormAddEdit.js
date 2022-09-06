@@ -48,9 +48,9 @@ class AddEditForm extends React.Component {
   }
 
   submitFormEdit = e => {
-    e.preventDefault()
-    fetch('http://localhost:9292/employees', {
-      method: 'put',
+    // e.preventDefault()
+    fetch("http://localhost:9292/employees", {
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -59,15 +59,15 @@ class AddEditForm extends React.Component {
         first: this.state.first,
         last: this.state.last,
         email: this.state.email,
-        phone: this.state.phone,
         location: this.state.location,
+        phone: this.state.phone,
         hobby: this.state.hobby
       })
     })
       .then(response => response.json())
       .then(item => {
         if(Array.isArray(item)) {
-          // console.log(item[0])
+          console.log(item[0])
           this.props.updateState(item[0])
           this.props.toggle()
         } else {
@@ -80,8 +80,8 @@ class AddEditForm extends React.Component {
   componentDidMount(){
     // if item exists, populate the state with proper data
     if(this.props.item){
-      const { id, first, last, email, phone, location, hobby } = this.props.item
-      this.setState({ id, first, last, email, phone, location, hobby })
+      const { id, first, last, email, location, phone,  hobby } = this.props.item
+      this.setState({ id, first, last, email,  location, phone,hobby })
     }
   }
 
@@ -119,4 +119,4 @@ class AddEditForm extends React.Component {
   }
 }
 
-export default AddEditForm
+export default AddEditForm;
