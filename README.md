@@ -1,27 +1,116 @@
-# CRUD Starter Frontend
+
+# Employee Management System
+
+This repository contains a React based frontend & Ruby based backend project
+that can be used to keep or store employee data.
 
 ![image](https://github.com/olinations/crud-starter-frontend/blob/master/template.png)
 
-This is the React frontend that goes with the [CRUD Starter API backend](https://github.com/olinations/crud-starter-api). It can, however, be used as a starter for any app that features get, post, put and delete requests.
 
-It uses Bootstrap styles and reactstrap, which creates Bootstrap components, to create a responsive data table that displays all data from a table in a database. It has a modal form for adding and editing items, a delete and edit button in each item row, and a button to download the entire database table into a CSV file.
+## Authors
 
-It uses react-csv to create the CSV download button.
+- [@carlagesa](https://www.github.com/carlagesa)
 
-## Instructions
 
-**1. Clone this repo**
+## Contributing
 
+Contributions are always welcome!
+
+See `contributing.md` for ways to get started.
+
+Please adhere to this project's `code of conduct`.
+
+
+## Features
+
+- CRUD operations 
+- Live previews
+- Fullscreen mode
+- Cross platform
+
+
+## Feedback
+
+If you have any feedback, please reach out to me at carltonagesa@gmail.com
+
+
+## 🚀 About Me
+I'm a full stack developer proficient in Ruby on Rails, SQLite, React & JavaScrip,
+HTML5, CSS3. I am based in Nairobi, Kenya
+
+
+# Hi, I'm CArlton! 👋
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://carltonagesa.netlify.app/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/carltonagesa)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/carl_agesa)
+
+
+## 🛠 Skills
+Front-end - HTML5, CSS3 (Bootsrap & Tailwind) & JavaScript, React Library
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://link-to-project
 ```
-git clone https://github.com/olinations/crud-starter-frontend.git
+
+
+```bash
+  cd client
+```
+Go to the project directory for Client side and...
+
+Install dependencies
+
+```bash
+  npm install
 ```
 
-**2. NPM install React and dependencies**
+Start the server
 
+```bash
+  npm run start
 ```
-npm install
+
+
+```bash
+  cd server
 ```
 
-## Notes
+Go to the project directory for Server side and...
 
-For full details on every piece of code in this CRUD Starter Frontend visit the companion [Medium article here](https://medium.com/@olinations/build-a-crud-template-using-react-bootstrap-express-postgres-9f84cc444438?source=friends_link&sk=51028bf98ff92bc659d3edbb539a82bb).
+Install dependencies
+
+```bash
+  bundle install
+```
+
+Start the server
+
+```bash
+  rake server
+```
+
+After doing this, visit localhost to see the application running 
+
+```bash
+  http://localhost:3000/
+```
+
+...and localhost port 9292 to see Ruby server running 
+
+```bash
+  http://localhost:9292/employees
+```
+
+
+
+
+
+
