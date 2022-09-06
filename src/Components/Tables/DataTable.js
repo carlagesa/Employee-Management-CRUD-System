@@ -35,7 +35,7 @@ class DataTable extends Component {
           <td>{item.first}</td>
           <td>{item.last}</td>
           <td>{item.email}</td>
-          <td>{item.location}</td>
+          <td>{item.work_station}</td>
           <td>{item.phone}</td>
           <td>{item.hobby}</td>
           <td>
@@ -59,7 +59,7 @@ class DataTable extends Component {
             <th>First</th>
             <th>Last</th>
             <th>Email</th>
-            <th>Location</th>
+            <th>Work Station</th>
             <th>Phone</th>
             <th>Hobby</th>
             <th>Actions</th>

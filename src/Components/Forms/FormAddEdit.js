@@ -8,7 +8,7 @@ class AddEditForm extends React.Component {
     last: '',
     email: '',
     phone: '',
-    location: '',
+    work_station: '',
     hobby: ''
   }
 
@@ -28,7 +28,7 @@ class AddEditForm extends React.Component {
         last: this.state.last,
         email: this.state.email,
         phone: this.state.phone,
-        location: this.state.location,
+        work_station: this.state.work_station,
         hobby: this.state.hobby
       })
     })
@@ -59,7 +59,7 @@ class AddEditForm extends React.Component {
         first: this.state.first,
         last: this.state.last,
         email: this.state.email,
-        location: this.state.location,
+        work_station: this.state.work_station,
         phone: this.state.phone,
         hobby: this.state.hobby
       })
@@ -80,8 +80,8 @@ class AddEditForm extends React.Component {
   componentDidMount(){
     // if item exists, populate the state with proper data
     if(this.props.item){
-      const { id, first, last, email, location, phone,  hobby } = this.props.item
-      this.setState({ id, first, last, email,  location, phone,hobby })
+      const { id, first, last, email, work_station, phone,  hobby } = this.props.item
+      this.setState({ id, first, last, email,  work_station, phone, hobby })
     }
   }
 
@@ -102,8 +102,8 @@ class AddEditForm extends React.Component {
         </FormGroup>
      
         <FormGroup>
-          <Label for="location">Location</Label>
-          <Input type="text" name="location" id="location" onChange={this.onChange} value={this.state.location === null ? '' : this.state.location}  placeholder="City, State" />
+          <Label for="work_station">Work Station</Label>
+          <Input type="text" name="work_station" id="work_station" onChange={this.onChange} value={this.state.work_station === null ? '' : this.state.work_station}  placeholder="City, State" />
         </FormGroup>
         <FormGroup>
           <Label for="phone">Phone</Label>
