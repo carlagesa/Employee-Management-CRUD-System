@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap'
 import ModalForm from './Components/Modals/Modal'
 import DataTable from './Components/Tables/DataTable'
 import { CSVLink } from "react-csv"
+import Example from './Components/Nav'
 
 class App extends Component {
   state = {
@@ -46,6 +47,9 @@ class App extends Component {
 
   render() {
     return (
+      <div>
+      <Example />
+
       <Container className="App">
         <Row>
           <Col>
@@ -71,6 +75,7 @@ class App extends Component {
           </Col>
         </Row>
       </Container>
+      </div>
     )
   }
 }
