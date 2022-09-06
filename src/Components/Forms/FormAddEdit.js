@@ -17,7 +17,7 @@ class AddEditForm extends React.Component {
   }
 
   submitFormAdd = e => {
-    e.preventDefault()
+    // e.preventDefault()
     fetch('http://localhost:9292/employees', {
       method: 'post',
       headers: {
@@ -32,22 +32,25 @@ class AddEditForm extends React.Component {
         hobby: this.state.hobby
       })
     })
+
       .then(response => response.json())
       .then(item => {
         if(Array.isArray(item)) {
           this.props.addItemToState(item[0])
           this.props.toggle()
+
         } else {
           console.log('failure')
         }
       })
+
       .catch(err => console.log(err))
   }
 
   submitFormEdit = e => {
-    e.preventDefault()
-    fetch('http://localhost:9292/employees', {
-      method: 'put',
+    // e.preventDefault()
+    fetch("http://localhost:9292/employees", {
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -56,15 +59,15 @@ class AddEditForm extends React.Component {
         first: this.state.first,
         last: this.state.last,
         email: this.state.email,
-        phone: this.state.phone,
         location: this.state.location,
+        phone: this.state.phone,
         hobby: this.state.hobby
       })
     })
       .then(response => response.json())
       .then(item => {
         if(Array.isArray(item)) {
-          // console.log(item[0])
+          console.log(item[0])
           this.props.updateState(item[0])
           this.props.toggle()
         } else {
@@ -77,8 +80,8 @@ class AddEditForm extends React.Component {
   componentDidMount(){
     // if item exists, populate the state with proper data
     if(this.props.item){
-      const { id, first, last, email, phone, location, hobby } = this.props.item
-      this.setState({ id, first, last, email, phone, location, hobby })
+      const { id, first, last, email, location, phone,  hobby } = this.props.item
+      this.setState({ id, first, last, email,  location, phone,hobby })
     }
   }
 
@@ -97,22 +100,23 @@ class AddEditForm extends React.Component {
           <Label for="email">Email</Label>
           <Input type="email" name="email" id="email" onChange={this.onChange} value={this.state.email === null ? '' : this.state.email}  />
         </FormGroup>
-        <FormGroup>
-          <Label for="phone">Phone</Label>
-          <Input type="text" name="phone" id="phone" onChange={this.onChange} value={this.state.phone === null ? '' : this.state.phone}  placeholder="ex. 555-555-5555" />
-        </FormGroup>
+     
         <FormGroup>
           <Label for="location">Location</Label>
           <Input type="text" name="location" id="location" onChange={this.onChange} value={this.state.location === null ? '' : this.state.location}  placeholder="City, State" />
         </FormGroup>
         <FormGroup>
+          <Label for="phone">Phone</Label>
+          <Input type="text" name="phone" id="phone" onChange={this.onChange} value={this.state.phone === null ? '' : this.state.phone}  placeholder="ex. 555-555-5555" />
+        </FormGroup>
+        <FormGroup>
           <Label for="hobby">Hobby</Label>
           <Input type="text" name="hobby" id="hobby" onChange={this.onChange} value={this.state.hobby}  />
         </FormGroup>
-        <Button>Submit</Button>
+        <Button  color="info" >Submit</Button>
       </Form>
     );
   }
 }
 
-export default AddEditForm
+export default AddEditForm;
