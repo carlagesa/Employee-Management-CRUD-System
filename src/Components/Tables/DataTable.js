@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { Table, Button } from 'reactstrap';
 import ModalForm from '../Modals/Modal'
+// import Example from '../Nav'
+
 
 class DataTable extends Component {
 
   deleteItem = id => {
-    let confirmDelete = window.confirm('Delete item forever?')
+    let confirmDelete = window.confirm('All good things have an end. Delete item forever?')
     if(confirmDelete){
-      fetch('http://localhost:9292/employees', {
+      fetch(`http://localhost:9292/employees/${id}`, {
       method: 'delete',
       headers: {
         'Content-Type': 'application/json'
@@ -26,7 +28,6 @@ class DataTable extends Component {
   }
 
   render() {
-
     const items = this.props.items.map(item => {
       return (
         <tr key={item.id}>
@@ -34,8 +35,8 @@ class DataTable extends Component {
           <td>{item.first}</td>
           <td>{item.last}</td>
           <td>{item.email}</td>
-          <td>{item.phone}</td>
           <td>{item.location}</td>
+          <td>{item.phone}</td>
           <td>{item.hobby}</td>
           <td>
             <div style={{width:"110px"}}>
@@ -49,6 +50,8 @@ class DataTable extends Component {
       })
 
     return (
+      <div>  
+   
       <Table responsive hover>
         <thead>
           <tr>
@@ -56,8 +59,8 @@ class DataTable extends Component {
             <th>First</th>
             <th>Last</th>
             <th>Email</th>
-            <th>Phone</th>
             <th>Location</th>
+            <th>Phone</th>
             <th>Hobby</th>
             <th>Actions</th>
           </tr>
@@ -66,6 +69,7 @@ class DataTable extends Component {
           {items}
         </tbody>
       </Table>
+      </div>
     )
   }
 }
