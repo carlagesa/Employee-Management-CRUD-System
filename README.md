@@ -4,7 +4,9 @@
 This repository contains a React based frontend & Ruby based backend project
 that can be used to keep or store employee data.
 
-![image](https://github.com/olinations/crud-starter-frontend/blob/master/template.png)
+## Demo
+
+https://employee-management-crud-system.vercel.app/
 
 
 ## Authors
@@ -109,8 +111,7 @@ After doing this, visit localhost to see the application running
   http://localhost:9292/employees
 ```
 
+## Screenshots
 
-
-
-
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
