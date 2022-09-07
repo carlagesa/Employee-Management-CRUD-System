@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// import  TeamLeads from '../TeamLeads'
 import {
   Collapse,
   Navbar,
@@ -19,6 +20,8 @@ function Example(args) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
+<div>
+
     <Navbar
     className="my-2"
     color="secondary"
@@ -31,12 +34,10 @@ function Example(args) {
     <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="">Team Leads</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">
-                GitHub
-              </NavLink>
+              <NavLink href="">Employee</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -53,7 +54,8 @@ function Example(args) {
           {/* <NavbarText>Simple Text</NavbarText> */}
         </Collapse>
   </Navbar>
-
+  {/* <TeamLeadsTable /> */}
+</div>
   );
 }
 

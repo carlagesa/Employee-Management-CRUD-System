@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Table, Button } from 'reactstrap';
 import ModalForm from '../Modals/Modal'
-// import Example from '../Nav'
 
 
 class DataTable extends Component {
@@ -64,7 +63,9 @@ class DataTable extends Component {
             <th>Hobby</th>
             <th>Actions</th>
           </tr>
+
         </thead>
+
         <tbody>
           {items}
         </tbody>

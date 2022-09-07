@@ -4,6 +4,7 @@ import ModalForm from './Components/Modals/Modal'
 import DataTable from './Components/Tables/DataTable'
 import { CSVLink } from "react-csv"
 import Example from './Components/Nav'
+import { Button } from 'reactstrap';
 
 class App extends Component {
   state = {
@@ -47,9 +48,9 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-      <Example />
 
+      <div className='App'>
+      <Example />
       <Container className="App">
         <Row>
           <Col>
@@ -58,7 +59,7 @@ class App extends Component {
         </Row>
         <Row>
           <Col>
-            <DataTable items={this.state.items} updateState={this.updateState} deleteItemFromState={this.deleteItemFromState} />
+          <DataTable items={this.state.items} updateState={this.updateState} deleteItemFromState={this.deleteItemFromState} />
           </Col>
         </Row>
         <Row>
@@ -72,12 +73,20 @@ class App extends Component {
               Download CSV
             </CSVLink>
             <ModalForm buttonLabel="Add Item" addItemToState={this.addItemToState}/>
+
+{/* <Link to="/teamleads"> */}
+<a href="./Teamleads" target="_blank" >
+  <Button variant="outlined">
+    Team Leaders
+  </Button>
+  </a>
+{/* </Link> */}
           </Col>
         </Row>
       </Container>
       </div>
     )
-  }
-}
+    }}  
+
 
 export default App
