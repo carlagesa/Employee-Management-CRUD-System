@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Example from './Nav'
+import ModalForm from './Modals/Modal';
 import { Link } from "react-router-dom";
 import { Container, Row } from 'reactstrap'
 import { Button } from 'reactstrap';
@@ -53,7 +54,10 @@ render() {
             <td>{customer.phone}</td>
             <td>{customer.email}</td>
             <td>{customer.work_station}</td>
-
+            {/* <td><Button color="primary" >Edit</Button></td> */}
+            
+           <td><ModalForm buttonLabel="Edit" item={customer} updateState={this.props.updateState}/></td> 
+              {/* {' '} */}
             <td> <Button color="danger" >Del</Button></td>
           </tr>
          )}
