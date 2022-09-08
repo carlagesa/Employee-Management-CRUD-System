@@ -55,10 +55,13 @@ render() {
             <td>{customer.email}</td>
             <td>{customer.work_station}</td>
             {/* <td><Button color="primary" >Edit</Button></td> */}
-            
-           <td><ModalForm buttonLabel="Edit" item={customer} updateState={this.props.updateState}/></td> 
+            <td>
+            <div style={{width:"110px"}}>
+           <ModalForm buttonLabel="Edit" item={customer} updateState={this.props.updateState}/>
               {/* {' '} */}
-            <td> <Button color="danger" >Del</Button></td>
+            <Button color="danger" >Del</Button>
+            </div>
+            </td>
           </tr>
          )}
         </tbody>
