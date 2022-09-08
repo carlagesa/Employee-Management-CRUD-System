@@ -68,8 +68,10 @@ render() {
       </table>
       <Container className="App">
         <Row>
+        <ModalForm buttonLabel="Add Team Lead" addItemToState={this.addItemToState} />
+
           <Button element={Link} to="../App">
-            Click Me
+            Check Employees
           </Button>
         </Row>
       </Container>
