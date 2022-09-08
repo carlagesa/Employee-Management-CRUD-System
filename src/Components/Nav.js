@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import  TeamLeads from '../TeamLeads'
 import {
   Collapse,
   Navbar,
@@ -20,18 +19,18 @@ function Example(args) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-<div>
+    <div>
 
-    <Navbar
-    className="my-2"
-    color="secondary"
-    dark
-  >
-    <NavbarBrand href="/">
-      Online Management System
-    </NavbarBrand>
-    <NavbarToggler onClick={toggle} />
-    <Collapse isOpen={isOpen} navbar>
+      <Navbar
+        className="my-2"
+        color="secondary"
+        dark
+      >
+        <NavbarBrand href="/">
+          Online Management System
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
               <NavLink href="">Team Leads</NavLink>
@@ -51,12 +50,10 @@ function Example(args) {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          {/* <NavbarText>Simple Text</NavbarText> */}
         </Collapse>
-  </Navbar>
-  {/* <TeamLeadsTable /> */}
-</div>
+      </Navbar>
+    </div>
   );
 }
 
-export default Example;
+export default Example
