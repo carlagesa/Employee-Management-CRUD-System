@@ -23,7 +23,6 @@ class DataTable extends Component {
       })
       .catch(err => console.log(err))
     }
-
   }
 
   render() {
@@ -36,7 +35,7 @@ class DataTable extends Component {
           <td>{item.email}</td>
           <td>{item.work_station}</td>
           <td>{item.phone}</td>
-          <td>{item.hobby}</td>
+          <td>{item.salary}</td>
           <td>
             <div style={{width:"110px"}}>
               <ModalForm buttonLabel="Edit" item={item} updateState={this.props.updateState}/>
@@ -60,7 +59,7 @@ class DataTable extends Component {
             <th>Email</th>
             <th>Work Station</th>
             <th>Phone</th>
-            <th>Hobby</th>
+            <th>Salary</th>
             <th>Actions</th>
           </tr>
 
