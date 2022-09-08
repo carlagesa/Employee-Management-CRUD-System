@@ -9,7 +9,7 @@ function Handler() {
         <div>
             <Routes>
                 <Route path="/about" element={<About />} />
-                <Route path="/" element={<App />} />
+                <Route path="/home" element={<App />} />
                 <Route path="/teamleads" element={<TeamLeads />} />
             </Routes>
         </div>
