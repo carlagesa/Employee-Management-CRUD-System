@@ -1,7 +1,9 @@
 import React from 'react'
 import Example from './Nav'
+import { Link } from "react-router-dom";
 import { Container, Row } from 'reactstrap'
 import { Button } from 'reactstrap';
+import LeadsModal from './Modals/LeadsModal';
 
 class TeamLeads extends React.Component {
   constructor(props) {
@@ -74,7 +76,7 @@ class TeamLeads extends React.Component {
                 <td>{customer.work_station}</td>
                 <td>
                   <div style={{ width: "110px" }}>
-                    {/* <LeadsModal buttonLabel="Edit" item={customer} updateState={this.props.updateState} /> */}
+                    <LeadsModal buttonLabel="Edit" item={customer} updateState={this.props.updateState} />
                     <Button color="danger" >Del</Button>
                   </div>
                 </td>
@@ -86,9 +88,9 @@ class TeamLeads extends React.Component {
         </table>
         <Container className="App">
           <Row>
-            {/* <LeadsModal buttonLabel="Add Item" /> */}
+            <LeadsModal buttonLabel="Add Item" />
 
-            <a href="http://localhost:3000/home" target="_blank" rel='noopener noreferrer'>
+            <a href="http://localhost:3000/home" target="_blank" >
                 <Button variant="outlined">
                   Employees
                 </Button>

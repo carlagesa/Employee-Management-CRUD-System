@@ -1,6 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import App from '../App'
+
 function Example(){
 return(
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -10,17 +9,18 @@ return(
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        
+         
           <ul class="navbar-nav">
             <li class="nav-item">
-              {/* <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link active" aria-current="page" href="#"
                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Check Employees"
-              >Home</a> */}      
-                    <Routes>
-                       <Route path="/" element={<App />} />
-                    </Routes>
-
-              {/* <a class="nav-link" href="#">About</a> */}
+              >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Team Leads</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -32,11 +32,7 @@ return(
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
-        
-
           </ul>
-         
-
         </div>
       </div> 
       <div class="container-fluid">

@@ -8,7 +8,7 @@ function Handler() {
     return (
         <div>
             <Routes>
-                <Route path="/" element={<App />} />
+            <Route path="/" element={<App />} />
                 <Route path="/home" element={<App />} />
                 <Route path="/teamleads" element={<TeamLeads />} />
                 <Route path="/about" element={<About />} />
