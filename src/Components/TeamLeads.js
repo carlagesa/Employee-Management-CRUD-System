@@ -3,6 +3,7 @@ import Example from './Nav'
 import { Container, Row } from 'reactstrap'
 import { Button } from 'reactstrap';
 import LeadsModal from './Modals/LeadsModal';
+import { Link } from 'react-router-dom';
 
 class TeamLeads extends React.Component {
   constructor(props) {
@@ -15,8 +16,8 @@ class TeamLeads extends React.Component {
     fetch("http://localhost:9292/team_leads")
       .then(res => res.json())
       .then(
-        ( teamleads) => {
-          this.setState({  teamleads:  teamleads });
+        (teamleads) => {
+          this.setState({ teamleads: teamleads });
         },
         (error) => {
           alert(error);
@@ -26,21 +27,21 @@ class TeamLeads extends React.Component {
 
   addItemToState = (teamlead) => {
     this.setState(prevState => ({
-       teamleads: [...prevState. teamleads, teamlead]
+      teamleads: [...prevState.teamleads, teamlead]
     }))
   }
 
   updateState = (teamlead) => {
-    const teamleadIndex = this.state. teamleads.findIndex(data => data.id === teamlead.id)
+    const teamleadIndex = this.state.teamleads.findIndex(data => data.id === teamlead.id)
     const newArray = [
       // destructure all items from beginning to the indexed item
-      ...this.state. teamleads.slice(0, teamleadIndex),
+      ...this.state.teamleads.slice(0, teamleadIndex),
       // add the updated item to the array
       teamlead,
       // add the rest of the items to the array from the index after the replaced item
-      ...this.state. teamleads.slice(teamleadIndex + 1)
+      ...this.state.teamleads.slice(teamleadIndex + 1)
     ]
-    this.setState({  teamleads: newArray })
+    this.setState({ teamleads: newArray })
   }
   componentDidMount() {
     this.getItems()
@@ -88,12 +89,11 @@ class TeamLeads extends React.Component {
         <Container className="App">
           <Row>
             <LeadsModal buttonLabel="Add Item" />
-
-            <a href="http://localhost:3000/home" target="_blank" >
-                <Button variant="outlined">
-                  Employees
-                </Button>
-              </a>
+            <Link to="/home">
+              <Button variant="outlined">
+                Employees
+              </Button>
+            </Link>
           </Row>
         </Container>
       </div>
