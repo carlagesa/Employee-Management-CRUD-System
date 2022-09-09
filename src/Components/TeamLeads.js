@@ -1,6 +1,5 @@
 import React from 'react'
 import Example from './Nav'
-import { Link } from "react-router-dom";
 import { Container, Row } from 'reactstrap'
 import { Button } from 'reactstrap';
 import LeadsModal from './Modals/LeadsModal';
@@ -9,15 +8,15 @@ class TeamLeads extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      customers: []
+      teamleads: []
     }
   }
   getItems() {
     fetch("http://localhost:9292/team_leads")
       .then(res => res.json())
       .then(
-        (customers) => {
-          this.setState({ customers: customers });
+        ( teamleads) => {
+          this.setState({  teamleads:  teamleads });
         },
         (error) => {
           alert(error);
@@ -25,23 +24,23 @@ class TeamLeads extends React.Component {
       )
   }
 
-  addItemToState = (customer) => {
+  addItemToState = (teamlead) => {
     this.setState(prevState => ({
-      customers: [...prevState.customers, customer]
+       teamleads: [...prevState. teamleads, teamlead]
     }))
   }
 
-  updateState = (customer) => {
-    const customerIndex = this.state.customers.findIndex(data => data.id === customer.id)
+  updateState = (teamlead) => {
+    const teamleadIndex = this.state. teamleads.findIndex(data => data.id === teamlead.id)
     const newArray = [
       // destructure all items from beginning to the indexed item
-      ...this.state.customers.slice(0, customerIndex),
+      ...this.state. teamleads.slice(0, teamleadIndex),
       // add the updated item to the array
-      customer,
+      teamlead,
       // add the rest of the items to the array from the index after the replaced item
-      ...this.state.customers.slice(customerIndex + 1)
+      ...this.state. teamleads.slice(teamleadIndex + 1)
     ]
-    this.setState({ customers: newArray })
+    this.setState({  teamleads: newArray })
   }
   componentDidMount() {
     this.getItems()
@@ -66,17 +65,17 @@ class TeamLeads extends React.Component {
           <tbody>
 
 
-            {this.state.customers.map(customer =>
+            {this.state.teamleads.map(teamlead =>
               <tr >
-                <th scope="row">{customer.id}</th>
-                <td>{customer.firstname}</td>
-                <td>{customer.lastname}</td>
-                <td>{customer.phone}</td>
-                <td>{customer.email}</td>
-                <td>{customer.work_station}</td>
+                <th scope="row">{teamlead.id}</th>
+                <td>{teamlead.firstname}</td>
+                <td>{teamlead.lastname}</td>
+                <td>{teamlead.phone}</td>
+                <td>{teamlead.email}</td>
+                <td>{teamlead.work_station}</td>
                 <td>
                   <div style={{ width: "110px" }}>
-                    <LeadsModal buttonLabel="Edit" item={customer} updateState={this.props.updateState} />
+                    <LeadsModal buttonLabel="Edit" item={teamlead} updateState={this.props.updateState} />
                     <Button color="danger" >Del</Button>
                   </div>
                 </td>
