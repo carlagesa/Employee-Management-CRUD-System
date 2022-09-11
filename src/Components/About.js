@@ -6,7 +6,7 @@ function About(){
         <div>
         <Example />
         <div>
-            <h1>Hello, this is our about! </h1>
+            <h1>Hello, this is project was made using React and ReactStrap for front-end and Ruby together with sinatra for backend </h1>
         </div>
         </div>
     )
