@@ -89,7 +89,7 @@ class TeamLeads extends React.Component {
         <Container className="App">
           <Row>
             <LeadsModal buttonLabel="Add Item" />
-            <Link to="/home">
+            <Link to="/app">
               <Button variant="outlined">
                 Employees
               </Button>

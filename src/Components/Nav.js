@@ -17,15 +17,23 @@ return(
               {/* <a class="nav-link active" aria-current="page" href="#"
                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Check Employees"
               >Home</a> */}
-              <Link to="/home" class="nav-link active" aria-current="page"> Home</Link>
+              <Link to="/" class="nav-link active" aria-current="page"> Home</Link>
 
             </li>
+            <li class="nav-item">
+            <Link to="/app" class="nav-link active" aria-current="page">Employees</Link>
+
+            </li>
+
             <li class="nav-item">
             <Link to="/teamleads" class="nav-link active" aria-current="page"> Team Leads</Link>
 
             </li>
             <li class="nav-item">
             <Link to="/about" class="nav-link active" aria-current="page"> About</Link>
+            </li>
+            <li class="nav-item">
+            <Link to="/contact-us" class="nav-link active" aria-current="page"> Contact</Link>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
