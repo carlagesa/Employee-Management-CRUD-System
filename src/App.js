@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   getItems() {
-    fetch('http://localhost:9292/employees')
+    fetch('https://fakesome.herokuapp.com/people')
       .then(response => response.json())
       .then(items => this.setState({ items }))
       .catch(err => console.log(err))
