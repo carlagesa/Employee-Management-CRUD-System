@@ -30,8 +30,8 @@ class DataTable extends Component {
       return (
         <tr key={item.id}>
           <th scope="row">{item.id}</th>
-          <td>{item.first}</td>
-          <td>{item.last}</td>
+          <td>{item.first_name}</td>
+          <td>{item.last_name}</td>
           <td>{item.email}</td>
           <td>{item.work_station}</td>
           <td>{item.phone}</td>
